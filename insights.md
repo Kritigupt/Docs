@@ -36,7 +36,7 @@ curl --location 'http://localhost:8086/api/v1/insights' \
 | `description`   | String    | Description of the insight(Min=10 , Max=500)  |
 | `image`         | File[]    | Image file related to particular insight      |
 | `insightId`     | String    | Id of the insight                             |
-| `userId`        | String    | Id of the user who has created the insight   |                                         
+| `userId`        | String    | Id of the user who has created the insight    |                                         
 ```
 
 ###  🌐 Response Structure 
