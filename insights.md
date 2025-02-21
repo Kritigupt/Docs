@@ -9,7 +9,7 @@ Users can create inkyst insights with image uploads.
 
 **Method:** `POST`  
 
-**URL:** `http://localhost:8086/api/v1/insights`
+**URL:** `https://backend.inkyst.com/api/v1/insights`
 
 
 ### Request Headers
@@ -22,9 +22,8 @@ Request Example
 
 ```bash
 
-curl --location 'http://localhost:8086/api/v1/insights' \
---header 'Cookie: JSESSIONID=BD09D22736E3ADE106D1BA2DB7B53E3F' \
---form 'title="Testing new"' \
+curl --location 'https://backend.inkyst.com/api/v1/insights' \
+--form 'title="Testing neww"' \
 --form 'file=@"/C:/Users/kriti/Downloads/buk.jpg"' \
 --form 'description="description new is the"' \
 --form 'userId="12345"'
@@ -45,8 +44,8 @@ curl --location 'http://localhost:8086/api/v1/insights' \
     "status": "CREATED",
     "message": "Insight created successfully",
     "data": {
-        "insightId": "67b78ec6919f0e02eaba4468",
-        "title": "Testing new",
+        "insightId": "67b8bc55aeb1a64012b51fe2",
+        "title": "Testing neww",
         "fileUrl": "https://storage.cloud.google.com/inkyst_collection_bucket/insights/files/89a93dea-d53f-4b13-a436-ba36e83ec5d9-buk.jpg",
         "description": "description new is the",
         "userId": "12345"
@@ -63,12 +62,15 @@ Users can get particular insight using insightId
 
 **Method:** `GET`  
 
-**URL:** `http://localhost:8086/api/v1/insights/{insightId}`
+**URL:** `https://backend.inkyst.com/api/v1/insights/{insightId}`
 
 Request Example
 ``` bash
-curl --location 'http://localhost:8086/api/v1/insights/67b78ec6919f0e02eaba4468' \
---header 'Cookie: JSESSIONID=BD09D22736E3ADE106D1BA2DB7B53E3F'
+curl --location --request GET 'https://backend.inkyst.com/api/v1/insights/67b8bc55aeb1a64012b51fe2' \
+--form 'title="Testing neww"' \
+--form 'file=@"/C:/Users/kriti/Downloads/buk.jpg"' \
+--form 'description="description new is the"' \
+--form 'userId="12345"'
 ```
 
 ###  🌐 Response Structure 
@@ -77,9 +79,9 @@ curl --location 'http://localhost:8086/api/v1/insights/67b78ec6919f0e02eaba4468'
     "status": "OK",
     "message": "Insight fetched successfully",
     "data": {
-        "insightId": "67b78ec6919f0e02eaba4468",
-        "title": "Testing new",
-        "fileUrl": "https://storage.cloud.google.com/inkyst_collection_bucket/insights/files/89a93dea-d53f-4b13-a436-ba36e83ec5d9-buk.jpg",
+        "insightId": "67b8bc55aeb1a64012b51fe2",
+        "title": "Testing neww",
+        "fileUrl": "https://storage.cloud.google.com/inkyst_collection_bucket/insights/files/0daf1595-6c43-4a9f-b9c7-ded82fbf250c-buk.jpg",
         "description": "description new is the",
         "userId": "12345"
     }
